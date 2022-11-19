@@ -1,5 +1,17 @@
 # xstate
 
+## 4.34.1
+
+### Patch Changes
+
+- [#3677](https://github.com/statelyai/xstate/pull/3677) [`a2ecf97ca`](https://github.com/statelyai/xstate/commit/a2ecf97cab7587946e947146c8bc3138393a55bf) Thanks [@Andarist](https://github.com/Andarist)! - Fixed an issue with targeted ancestors not being correctly exited when reented during external transitions.
+
+- [#3623](https://github.com/statelyai/xstate/pull/3623) [`163c25562`](https://github.com/statelyai/xstate/commit/163c25562db20b335540d1342a38a4a12343a299) Thanks [@arromeo](https://github.com/arromeo)! - Fixed an issue with external transitions targeting ancestor states. In such a case, `entry` actions were incorrectly called on the states between the source state and the target state for states that were not reentered within this transition.
+
+- [#3677](https://github.com/statelyai/xstate/pull/3677) [`a2ecf97ca`](https://github.com/statelyai/xstate/commit/a2ecf97cab7587946e947146c8bc3138393a55bf) Thanks [@Andarist](https://github.com/Andarist)! - Fixed an issue with the _active_ descendants of the targeted ancestor not being correctly reentered during external transitions.
+
+- [#3666](https://github.com/statelyai/xstate/pull/3666) [`5e0808eb4`](https://github.com/statelyai/xstate/commit/5e0808eb440f77b8404db6676401849053cfcfd8) Thanks [@davidkpiano](https://github.com/davidkpiano)! - The warning for the `predictableActionArguments` setting has been improved to only warn if it is absent. You can disable the warning by setting `predictableActionArguments: false`. It's still recommended to set it to `true` though.
+
 ## 4.34.0
 
 ### Minor Changes
